@@ -3,7 +3,6 @@ import { Link, Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useC
 import globalStylesUrl from '~/styles/global.css';
 import darkStylesUrl from '~/styles/dark.css';
 
-// https://remix.run/api/app#links
 export let links = () => {
     return [
         { rel: 'stylesheet', href: globalStylesUrl },
@@ -15,8 +14,6 @@ export let links = () => {
     ];
 };
 
-// https://remix.run/api/conventions#default-export
-// https://remix.run/api/conventions#route-filenames
 export default function App() {
     return (
         <Document>
@@ -27,7 +24,6 @@ export default function App() {
     );
 }
 
-// https://remix.run/docs/en/v1/api/conventions#errorboundary
 export function ErrorBoundary({ error }) {
     return (
         <Document title="Error!">
@@ -43,7 +39,6 @@ export function ErrorBoundary({ error }) {
     );
 }
 
-// https://remix.run/docs/en/v1/api/conventions#catchboundary
 export function CatchBoundary() {
     let caught = useCatch();
 
